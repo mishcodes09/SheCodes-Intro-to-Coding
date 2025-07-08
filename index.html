@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>passion project</title>
+    <style>
+      @font-face {
+        font-family: "CustomFont"; /* Name your font family */
+        src: url("assets/fonts/Avara-Black.otf"); /* Locate the .ttf file within your directory*/
+      }
+
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/169/956/original/greenish.jpeg?1751961389");
+      }
+
+      .h1 {
+        text-align: center;
+        margin: auto 0;
+        padding-bottom: 10px;
+        font-family: "CustomFont", sans-serif;
+        color: white;
+      }
+
+      .h2 {
+        text-align: center;
+        margin: auto 0;
+        color: white;
+      }
+
+      hr {
+        color: white;
+        width: 30%;
+        margin: 20px auto;
+        border: 1px solid;
+      }
+
+      .img-girl {
+        margin-left: 100px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+      }
+
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 20px 100px;
+      }
+
+      .text-content {
+        max-width: 600px;
+        background-color: white;
+        padding: 40px;
+        border-radius: 20px;
+      }
+
+      .text-content p,
+      .text-content a,
+      .text-content button {
+        margin-bottom: 15px;
+      }
+
+      .btn {
+        border-radius: 20px;
+        border: none;
+        margin-top: 10px;
+        padding: 10px 20px; /* more balanced padding */
+        text-align: center;
+        background-color: greenyellow;
+        cursor: pointer;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="h1">I love Skating</h1>
+
+    <h2 class="h2">
+      Especially <i>Longboard</i>
+      Skating
+    </h2>
+
+    <hr style="width: 30%; margin: 20px auto; border: 1px solid" />
+
+    <div class="content-wrapper">
+      <img
+        class="img-girl"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/169/955/original/longboard.jpeg?1751961370"
+        alt="girl skating on Longboard"
+        width="30%"
+        height="30%"
+      />
+
+      <div class="text-content">
+        <p>
+          Longboard skating is a form of skateboarding that uses longer and more
+          stable boards, <br />
+          making it ideal for cruising, downhill racing, and freestyle riding.
+          Unlike traditional <br />
+          skateboards, longboards offer a smoother, more fluid ride, perfect for
+          carving down streets <br />
+          or gliding along coastal paths. With their wider decks and softer
+          wheels, longboards are often <br />
+          preferred for longer distances and a more relaxed, surf-like feel.
+          From city commuting to mountain roads, <br />
+          longboard skating is more than just a hobby — it’s a lifestyle.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Longboarding" target="_blank">
+          Read More on Wikipedia
+        </a>
+        <br />
+        <button class="btn" id="longboardBtn">Get your own Longboard</button>
+      </div>
+    </div>
+
+    <script>
+      const button = document.getElementById("longboardBtn");
+      const textContent = document.querySelector(".text-content");
+
+      button.addEventListener("click", function () {
+        const name = prompt("What's your name?");
+        if (name) {
+          alert(`Awesome, ${name}! A longboard is on the way 🛹`);
+          showConfirmationMessage(name);
+        } else {
+          alert("No worries! You can always get one later.");
+        }
+      });
+
+      function showConfirmationMessage(name) {
+        // Create and display a confirmation message below the button
+        let msg = document.createElement("div");
+        msg.innerText = `Thanks, ${name}! You're now on the list to receive exclusive longboard deals.`;
+        msg.style.marginTop = "20px";
+        msg.style.fontWeight = "bold";
+        msg.style.color = "red";
+        textContent.appendChild(msg);
+      }
+    </script>
+  </body>
+</html>
