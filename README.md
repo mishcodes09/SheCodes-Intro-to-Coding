@@ -27,8 +27,6 @@ Through this project and the SheCodes lessons, I gained a solid foundation in:
 
 ```bash
 │── index.html
-│── style.css
-│── script.js
 ```
 🙏 Special Thanks
 Huge thanks to the Matt Delac and SheCodes team for making coding fun and approachable!
